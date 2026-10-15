@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'halaman_home.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,16 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Aplikasi Profil Mahasiswa',
       debugShowCheckedModeBanner: false,
-      title: 'E-Money App',
       theme: ThemeData(
-        brightness: Brightness.dark,
-        scaffoldBackgroundColor: const Color(0xFF121212),
-        primaryColor: const Color(0xFFD32F2F),
-        colorScheme: const ColorScheme.dark(
-          primary: Color(0xFFD32F2F),
-          secondary: Color(0xFFEF5350),
-          surface: Color(0xFF1E1E1E),
+        useMaterial3: true,
+        primaryColor: const Color(0xFF1E88E5),
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF1E88E5),
+          foregroundColor: Colors.white,
+          centerTitle: true,
+          elevation: 0,
         ),
       ),
       home: const HomePage(),
